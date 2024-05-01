@@ -1,4 +1,4 @@
-import { InputType } from "../../types/uiTypes";
+import { InputType } from "../types/uiTypes";
 
 const Input = (props: InputType) => {
   const { value, onChange, onSubmit } = props;

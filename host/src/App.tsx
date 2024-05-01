@@ -6,8 +6,10 @@ function App() {
   const [newTodo, setNewTodo] = useState<string>("");
   const [todos, setTodos] = useState<string[]>([]);
   const onSubmit = () => {
-    setTodos((prev) => [...prev, newTodo]);
-    setNewTodo("");
+    if (newTodo !== "" && !todos.includes(newTodo)) {
+      setTodos((prev) => [...prev, newTodo]);
+      setNewTodo("");
+    }
   };
 
   return (
